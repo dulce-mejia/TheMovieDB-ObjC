@@ -6,6 +6,10 @@
 //
 
 #import "SceneDelegate.h"
+#import <UIKit/UIKit.h>
+#import "FeedViewController.h"
+#import "FeedViewModel.h"
+#import "URLSessionHTTPClient.h"
 
 @interface SceneDelegate ()
 
@@ -13,13 +17,25 @@
 
 @implementation SceneDelegate
 
-
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.windowScene = (UIWindowScene*)scene;
+    UINavigationController *nav = [[UINavigationController alloc]init];
+    URLSessionHTTPClient *client = [[URLSessionHTTPClient alloc] initWithSession:[NSURLSession sharedSession]];
+    [nav setViewControllers:@[[self makeFirstVCWithClient:client]]];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+
 }
 
+-(UIViewController*)makeFirstVCWithClient:(id<HTTPClient>)client {
+    RemoteFeedLoader *feedLoader = [[RemoteFeedLoader alloc] initWithClient:client];
+    RemoteImageLoader *imageLoader = [[RemoteImageLoader alloc] initWithClient:client];
+    FeedViewModel *vm = [[FeedViewModel alloc]initWithFeedLoader:feedLoader imageLoader:imageLoader];
+    UIViewController *vc = [[FeedViewController alloc] initWithViewModel:vm];
+    return vc;
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

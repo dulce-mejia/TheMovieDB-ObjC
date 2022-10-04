@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92BA33228E949DB004C8ED5 /* URLSessionHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F92BA33128E949DB004C8ED5 /* URLSessionHTTPClient.m */; };
+		F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */; };
+		F9813D3028E78D1B00AF78DE /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813D2F28E78D1B00AF78DE /* MovieViewModel.m */; };
+		F9813D3328E7901900AF78DE /* MovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813D3228E7901900AF78DE /* MovieView.m */; };
+		F98BFE7628EB88C3006385E3 /* RemoteImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F98BFE7528EB88C3006385E3 /* RemoteImageLoader.m */; };
+		F990DDEC28EA4771008D1BD1 /* Endpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F990DDEB28EA4771008D1BD1 /* Endpoint.m */; };
+		F990DDF028EA4D27008D1BD1 /* RemoteFeedLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F990DDEF28EA4D27008D1BD1 /* RemoteFeedLoader.m */; };
+		F990DDF328EA4F92008D1BD1 /* FeedEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F990DDF228EA4F92008D1BD1 /* FeedEndpoint.m */; };
 		F9924CD628E5F6850067C610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CD528E5F6850067C610 /* AppDelegate.m */; };
 		F9924CD928E5F6850067C610 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CD828E5F6850067C610 /* SceneDelegate.m */; };
-		F9924CDC28E5F6850067C610 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CDB28E5F6850067C610 /* ViewController.m */; };
-		F9924CDF28E5F6850067C610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9924CDD28E5F6850067C610 /* Main.storyboard */; };
 		F9924CE128E5F6860067C610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9924CE028E5F6860067C610 /* Assets.xcassets */; };
 		F9924CE428E5F6860067C610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9924CE228E5F6860067C610 /* LaunchScreen.storyboard */; };
 		F9924CE728E5F6860067C610 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CE628E5F6860067C610 /* main.m */; };
 		F9924CF128E5F6870067C610 /* TheMovieDB_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CF028E5F6870067C610 /* TheMovieDB_ObjCTests.m */; };
 		F9924CFB28E5F6870067C610 /* TheMovieDB_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CFA28E5F6870067C610 /* TheMovieDB_ObjCUITests.m */; };
 		F9924CFD28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */; };
+		F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924D0C28E5FD120067C610 /* FeedViewController.m */; };
+		F9924D1A28E68F940067C610 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924D1928E68F940067C610 /* Movie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +45,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F92BA33028E949DB004C8ED5 /* URLSessionHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSessionHTTPClient.h; sourceTree = "<group>"; };
+		F92BA33128E949DB004C8ED5 /* URLSessionHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSessionHTTPClient.m; sourceTree = "<group>"; };
+		F92BA33328E95E2D004C8ED5 /* FeedViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewModel.h; sourceTree = "<group>"; };
+		F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewModel.m; sourceTree = "<group>"; };
+		F9813D2E28E78D1B00AF78DE /* MovieViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewModel.h; sourceTree = "<group>"; };
+		F9813D2F28E78D1B00AF78DE /* MovieViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewModel.m; sourceTree = "<group>"; };
+		F9813D3128E7901900AF78DE /* MovieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieView.h; sourceTree = "<group>"; };
+		F9813D3228E7901900AF78DE /* MovieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieView.m; sourceTree = "<group>"; };
+		F98BFE7428EB88C3006385E3 /* RemoteImageLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteImageLoader.h; sourceTree = "<group>"; };
+		F98BFE7528EB88C3006385E3 /* RemoteImageLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteImageLoader.m; sourceTree = "<group>"; };
+		F990DDEA28EA4771008D1BD1 /* Endpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Endpoint.h; sourceTree = "<group>"; };
+		F990DDEB28EA4771008D1BD1 /* Endpoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Endpoint.m; sourceTree = "<group>"; };
+		F990DDEE28EA4D27008D1BD1 /* RemoteFeedLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteFeedLoader.h; sourceTree = "<group>"; };
+		F990DDEF28EA4D27008D1BD1 /* RemoteFeedLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteFeedLoader.m; sourceTree = "<group>"; };
+		F990DDF128EA4F92008D1BD1 /* FeedEndpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedEndpoint.h; sourceTree = "<group>"; };
+		F990DDF228EA4F92008D1BD1 /* FeedEndpoint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedEndpoint.m; sourceTree = "<group>"; };
 		F9924CD128E5F6850067C610 /* TheMovieDB-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheMovieDB-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9924CD428E5F6850067C610 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9924CD528E5F6850067C610 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F9924CD728E5F6850067C610 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		F9924CD828E5F6850067C610 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		F9924CDA28E5F6850067C610 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F9924CDB28E5F6850067C610 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F9924CDE28E5F6850067C610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9924CE028E5F6860067C610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9924CE328E5F6860067C610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9924CE528E5F6860067C610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +75,10 @@
 		F9924CF628E5F6870067C610 /* TheMovieDB-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TheMovieDB-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9924CFA28E5F6870067C610 /* TheMovieDB_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheMovieDB_ObjCUITests.m; sourceTree = "<group>"; };
 		F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheMovieDB_ObjCUITestsLaunchTests.m; sourceTree = "<group>"; };
+		F9924D0B28E5FD120067C610 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		F9924D0C28E5FD120067C610 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		F9924D1828E68F940067C610 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		F9924D1928E68F940067C610 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +106,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F98BFE7328EB8873006385E3 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				F98BFE7428EB88C3006385E3 /* RemoteImageLoader.h */,
+				F98BFE7528EB88C3006385E3 /* RemoteImageLoader.m */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		F990DDED28EA4ABF008D1BD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F990DDEE28EA4D27008D1BD1 /* RemoteFeedLoader.h */,
+				F990DDEF28EA4D27008D1BD1 /* RemoteFeedLoader.m */,
+				F990DDF128EA4F92008D1BD1 /* FeedEndpoint.h */,
+				F990DDF228EA4F92008D1BD1 /* FeedEndpoint.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		F9924CC828E5F6850067C610 = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +149,12 @@
 		F9924CD328E5F6850067C610 /* TheMovieDB-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				F9924D1128E648E20067C610 /* NetworkLayer */,
+				F9924D0928E5FCDF0067C610 /* Features */,
 				F9924CD428E5F6850067C610 /* AppDelegate.h */,
 				F9924CD528E5F6850067C610 /* AppDelegate.m */,
 				F9924CD728E5F6850067C610 /* SceneDelegate.h */,
 				F9924CD828E5F6850067C610 /* SceneDelegate.m */,
-				F9924CDA28E5F6850067C610 /* ViewController.h */,
-				F9924CDB28E5F6850067C610 /* ViewController.m */,
-				F9924CDD28E5F6850067C610 /* Main.storyboard */,
 				F9924CE028E5F6860067C610 /* Assets.xcassets */,
 				F9924CE228E5F6860067C610 /* LaunchScreen.storyboard */,
 				F9924CE528E5F6860067C610 /* Info.plist */,
@@ -134,6 +178,92 @@
 				F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */,
 			);
 			path = "TheMovieDB-ObjCUITests";
+			sourceTree = "<group>";
+		};
+		F9924D0928E5FCDF0067C610 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F9924D0A28E5FCF20067C610 /* Feed */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F9924D0A28E5FCF20067C610 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F990DDED28EA4ABF008D1BD1 /* Data */,
+				F9924D1628E68EBF0067C610 /* Domain */,
+				F9924D0F28E63BDE0067C610 /* Presentation */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		F9924D0E28E63BD50067C610 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9924D1228E68E520067C610 /* cell */,
+				F9924D0B28E5FD120067C610 /* FeedViewController.h */,
+				F9924D0C28E5FD120067C610 /* FeedViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9924D0F28E63BDE0067C610 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F9924D1028E63BEA0067C610 /* ViewModel */,
+				F9924D0E28E63BD50067C610 /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F9924D1028E63BEA0067C610 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9813D2E28E78D1B00AF78DE /* MovieViewModel.h */,
+				F9813D2F28E78D1B00AF78DE /* MovieViewModel.m */,
+				F92BA33328E95E2D004C8ED5 /* FeedViewModel.h */,
+				F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9924D1128E648E20067C610 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F98BFE7328EB8873006385E3 /* ImageDownloader */,
+				F92BA33028E949DB004C8ED5 /* URLSessionHTTPClient.h */,
+				F92BA33128E949DB004C8ED5 /* URLSessionHTTPClient.m */,
+				F990DDEA28EA4771008D1BD1 /* Endpoint.h */,
+				F990DDEB28EA4771008D1BD1 /* Endpoint.m */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		F9924D1228E68E520067C610 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F9813D3128E7901900AF78DE /* MovieView.h */,
+				F9813D3228E7901900AF78DE /* MovieView.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		F9924D1628E68EBF0067C610 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F9924D1728E68F650067C610 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F9924D1728E68F650067C610 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9924D1828E68F940067C610 /* Movie.h */,
+				F9924D1928E68F940067C610 /* Movie.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +371,6 @@
 			files = (
 				F9924CE428E5F6860067C610 /* LaunchScreen.storyboard in Resources */,
 				F9924CE128E5F6860067C610 /* Assets.xcassets in Resources */,
-				F9924CDF28E5F6850067C610 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +395,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9924CDC28E5F6850067C610 /* ViewController.m in Sources */,
+				F9924D1A28E68F940067C610 /* Movie.m in Sources */,
+				F990DDF028EA4D27008D1BD1 /* RemoteFeedLoader.m in Sources */,
+				F98BFE7628EB88C3006385E3 /* RemoteImageLoader.m in Sources */,
+				F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */,
+				F9813D3328E7901900AF78DE /* MovieView.m in Sources */,
+				F9813D3028E78D1B00AF78DE /* MovieViewModel.m in Sources */,
+				F990DDEC28EA4771008D1BD1 /* Endpoint.m in Sources */,
 				F9924CD628E5F6850067C610 /* AppDelegate.m in Sources */,
+				F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */,
 				F9924CE728E5F6860067C610 /* main.m in Sources */,
 				F9924CD928E5F6850067C610 /* SceneDelegate.m in Sources */,
+				F990DDF328EA4F92008D1BD1 /* FeedEndpoint.m in Sources */,
+				F92BA33228E949DB004C8ED5 /* URLSessionHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,14 +444,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9924CDD28E5F6850067C610 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9924CDE28E5F6850067C610 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9924CE228E5F6860067C610 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +576,6 @@
 				INFOPLIST_FILE = "TheMovieDB-ObjC/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +601,6 @@
 				INFOPLIST_FILE = "TheMovieDB-ObjC/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
