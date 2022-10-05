@@ -6,7 +6,6 @@
 //
 
 #import "FeedViewModel.h"
-#import "Movie.h"
 
 @interface FeedViewModel()
 
@@ -29,12 +28,12 @@
 
 -(void)getFeed {
     __typeof(self) __weak weakSelf = self;
-    [self.feedLoader loadWithFeedType:FeedTypeNowPlaying completion:^(NSArray<Movie *> * _Nonnull movies, NSError * _Nullable err) {
+    [self.feedLoader loadWithFeedType:FeedTypeNowPlaying completion:^(NSArray<MovieModel *> * _Nonnull movies, NSError * _Nullable err) {
         
         if (movies != nil) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSMutableArray *viewModels = [[NSMutableArray alloc] init];
-                for (Movie *movie in movies) {
+                for (MovieModel *movie in movies) {
                     MovieViewModel *vm = [[MovieViewModel alloc] initWithMovie:movie imageLoader:self.imageLoader];
                     [viewModels addObject:vm];
                 }

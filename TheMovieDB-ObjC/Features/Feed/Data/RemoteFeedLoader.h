@@ -8,12 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "URLSessionHTTPClient.h"
 #import "FeedEndpoint.h"
-#import "Movie.h"
+#import "TheMovieDB_ObjC-Swift.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FeedLoader <NSObject>
 
-typedef void (^feedLoaderCompletion)(NSArray<Movie *> *__nullable movies, NSError *__nullable err);
+typedef void (^feedLoaderCompletion)(NSArray<MovieModel *> *__nullable movies, NSError *__nullable err);
 
 @required
 -(void)loadWithFeedType:(FeedType) feedType completion:(nullable feedLoaderCompletion)completion;

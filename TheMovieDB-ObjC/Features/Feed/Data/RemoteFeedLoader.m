@@ -6,7 +6,7 @@
 //
 
 #import "RemoteFeedLoader.h"
-#import "Movie.h"
+#import "TheMovieDB_ObjC-Swift.h"
 
 @implementation RemoteFeedLoader
 
@@ -30,16 +30,16 @@
                     NSMutableArray *movies = [[NSMutableArray alloc] init];
                     
                     for (NSDictionary *m in json) {
-                        Movie *movie = [[Movie alloc] initMovieWithId:[[m objectForKey:@"id"] integerValue]
-                                                         backdropPath:[m objectForKey:@"backdrop_path"]
-                                                         voteCount:[[m objectForKey:@"vote_count"] integerValue]
-                                                         origTitle:[m objectForKey:@"original_title"]
-                                                         posterPath:[m objectForKey:@"poster_path"]
-                                                         title:[m objectForKey:@"title"]
-                                                         voteAvg:0.0
-                                                         releaseDate:[m objectForKey:@"release_date"]
-                                                         overview:[m objectForKey:@"overview"]];
-                        [movies addObject:movie];
+                        MovieModel *movieModel = [[MovieModel alloc] initWithId: [[m objectForKey:@"id"] integerValue]
+                                                                   backdropPath:[m objectForKey:@"backdrop_path"]
+                                                                   voteCount:[[m objectForKey:@"vote_count"] integerValue]
+                                                                   originalTitle:[m objectForKey:@"original_title"]
+                                                                   posterPath:[m objectForKey:@"poster_path"]
+                                                                   title:[m objectForKey:@"title"]
+                                                                   voteAverage:[[m objectForKey:@"vote_average"] doubleValue]
+                                                                   releaseDate:[m objectForKey:@"release_date"]
+                                                                   overview:[m objectForKey:@"overview"]];
+                        [movies addObject:movieModel];
                     }
                     completion(movies, nil);
                 }

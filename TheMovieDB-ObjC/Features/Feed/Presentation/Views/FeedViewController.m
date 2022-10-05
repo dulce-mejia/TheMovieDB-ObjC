@@ -7,7 +7,6 @@
 
 #import "FeedViewController.h"
 #import <UIKit/UIKit.h>
-#import "Movie.h"
 #import "MovieView.h"
 #import "MovieViewModel.h"
 #import "FeedViewModel.h"
@@ -16,7 +15,7 @@
 
 @property (nonatomic, strong) UIStackView *container;
 @property (nonatomic, strong) UICollectionView *feedView;
-@property (nonatomic, strong) Movie *movie;
+@property (nonatomic, strong) MovieModel *movie;
 @property (nonatomic, strong) FeedViewModel *viewModel;
 @end
 

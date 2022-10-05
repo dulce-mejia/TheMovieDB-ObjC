@@ -6,16 +6,17 @@
 //
 
 #import "MovieViewModel.h"
+#import "TheMovieDB_ObjC-Swift.h"
 
 @interface MovieViewModel()
 
-@property (nonatomic, strong)Movie *movie;
+@property (nonatomic, strong)MovieModel *movie;
 
 @end
 
 @implementation MovieViewModel
 
--(id)initWithMovie: (Movie *) movie imageLoader:(id<ImageLoader>) imageLoader {
+-(id)initWithMovie: (MovieModel *) movie imageLoader:(id<ImageLoader>) imageLoader {
     if (self != nil) {
         self.movie = movie;
         self.imageLoader = imageLoader;

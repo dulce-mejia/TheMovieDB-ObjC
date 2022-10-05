@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Movie.h"
+#import "TheMovieDB_ObjC-Swift.h"
 #import "RemoteImageLoader.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *posterPath;
 @property (nonatomic, strong) NSData *image;
 
--(id)initWithMovie:(Movie *) movie imageLoader:(id<ImageLoader>) imageLoader;
+-(id)initWithMovie:(MovieModel *) movie imageLoader:(id<ImageLoader>) imageLoader;
 -(void)viewWillDisplay;
 @end
 

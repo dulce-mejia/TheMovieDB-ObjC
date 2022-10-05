@@ -24,7 +24,7 @@
 		F9924CFB28E5F6870067C610 /* TheMovieDB_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CFA28E5F6870067C610 /* TheMovieDB_ObjCUITests.m */; };
 		F9924CFD28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */; };
 		F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924D0C28E5FD120067C610 /* FeedViewController.m */; };
-		F9924D1A28E68F940067C610 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924D1928E68F940067C610 /* Movie.m */; };
+		F9BE69C828EE1FDF005ED03E /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE69C728EE1FDF005ED03E /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +77,7 @@
 		F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheMovieDB_ObjCUITestsLaunchTests.m; sourceTree = "<group>"; };
 		F9924D0B28E5FD120067C610 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		F9924D0C28E5FD120067C610 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
-		F9924D1828E68F940067C610 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		F9924D1928E68F940067C610 /* Movie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		F9BE69C728EE1FDF005ED03E /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +259,7 @@
 		F9924D1728E68F650067C610 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F9924D1828E68F940067C610 /* Movie.h */,
-				F9924D1928E68F940067C610 /* Movie.m */,
+				F9BE69C728EE1FDF005ED03E /* MovieModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,6 +331,7 @@
 				TargetAttributes = {
 					F9924CD028E5F6850067C610 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					F9924CEB28E5F6870067C610 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -395,13 +394,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9924D1A28E68F940067C610 /* Movie.m in Sources */,
 				F990DDF028EA4D27008D1BD1 /* RemoteFeedLoader.m in Sources */,
 				F98BFE7628EB88C3006385E3 /* RemoteImageLoader.m in Sources */,
 				F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */,
 				F9813D3328E7901900AF78DE /* MovieView.m in Sources */,
 				F9813D3028E78D1B00AF78DE /* MovieViewModel.m in Sources */,
 				F990DDEC28EA4771008D1BD1 /* Endpoint.m in Sources */,
+				F9BE69C828EE1FDF005ED03E /* MovieModel.swift in Sources */,
 				F9924CD628E5F6850067C610 /* AppDelegate.m in Sources */,
 				F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */,
 				F9924CE728E5F6860067C610 /* main.m in Sources */,
@@ -570,8 +569,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TheMovieDB-ObjC/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -586,6 +587,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dulce.TheMovieDB-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -595,8 +599,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "TheMovieDB-ObjC/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -611,6 +617,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dulce.TheMovieDB-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -618,6 +626,7 @@
 		F9924D0428E5F6870067C610 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -635,6 +644,7 @@
 		F9924D0528E5F6870067C610 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -652,6 +662,7 @@
 		F9924D0728E5F6870067C610 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -667,6 +678,7 @@
 		F9924D0828E5F6870067C610 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
