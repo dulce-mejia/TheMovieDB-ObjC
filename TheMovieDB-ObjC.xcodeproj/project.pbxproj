@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91AE3D428EF470D00AB66A2 /* MovieSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AE3D328EF470D00AB66A2 /* MovieSectionView.swift */; };
+		F91AE3D628EF476200AB66A2 /* MovieSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91AE3D528EF476200AB66A2 /* MovieSectionViewModel.swift */; };
 		F92BA33228E949DB004C8ED5 /* URLSessionHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F92BA33128E949DB004C8ED5 /* URLSessionHTTPClient.m */; };
 		F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */; };
 		F9813D3028E78D1B00AF78DE /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813D2F28E78D1B00AF78DE /* MovieViewModel.m */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91AE3D328EF470D00AB66A2 /* MovieSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionView.swift; sourceTree = "<group>"; };
+		F91AE3D528EF476200AB66A2 /* MovieSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionViewModel.swift; sourceTree = "<group>"; };
 		F92BA33028E949DB004C8ED5 /* URLSessionHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLSessionHTTPClient.h; sourceTree = "<group>"; };
 		F92BA33128E949DB004C8ED5 /* URLSessionHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLSessionHTTPClient.m; sourceTree = "<group>"; };
 		F92BA33328E95E2D004C8ED5 /* FeedViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewModel.h; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				F92BA33328E95E2D004C8ED5 /* FeedViewModel.h */,
 				F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */,
 				F9BE69D028EE44E5005ED03E /* FeedSectionViewModel.swift */,
+				F91AE3D528EF476200AB66A2 /* MovieSectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			children = (
 				F9813D3128E7901900AF78DE /* MovieView.h */,
 				F9813D3228E7901900AF78DE /* MovieView.m */,
+				F91AE3D328EF470D00AB66A2 /* MovieSectionView.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -400,11 +406,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F990DDF028EA4D27008D1BD1 /* RemoteFeedLoader.m in Sources */,
+				F91AE3D428EF470D00AB66A2 /* MovieSectionView.swift in Sources */,
 				F98BFE7628EB88C3006385E3 /* RemoteImageLoader.m in Sources */,
 				F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */,
 				F9813D3328E7901900AF78DE /* MovieView.m in Sources */,
 				F9813D3028E78D1B00AF78DE /* MovieViewModel.m in Sources */,
 				F990DDEC28EA4771008D1BD1 /* Endpoint.m in Sources */,
+				F91AE3D628EF476200AB66A2 /* MovieSectionViewModel.swift in Sources */,
 				F9BE69C828EE1FDF005ED03E /* MovieModel.swift in Sources */,
 				F9924CD628E5F6850067C610 /* AppDelegate.m in Sources */,
 				F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */,

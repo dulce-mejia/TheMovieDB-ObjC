@@ -10,6 +10,7 @@
 #import "MovieView.h"
 #import "MovieViewModel.h"
 #import "FeedViewModel.h"
+#import "TheMovieDB_ObjC-Swift.h"
 
 @interface FeedViewController ()
 
@@ -47,6 +48,7 @@
     layout.headerReferenceSize = CGSizeMake(self.view.bounds.size.width , 50);
     layout.itemSize = CGSizeMake(160 * 0.7, 160);
     layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    
     self.feedView = [[UICollectionView alloc] initWithFrame: CGRectZero collectionViewLayout:[UICollectionViewLayout new]];
     self.feedView.collectionViewLayout = layout;
     
@@ -67,6 +69,7 @@
     self.feedView.delegate = self;
     self.feedView.dataSource = self;
     [self.feedView registerClass:[MovieView class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.feedView registerClass:[MovieSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
 }
 
 -(void)updateFeed {
@@ -79,16 +82,15 @@
 #pragma mark - Observers
 
 -(void)setObservers {
-    [self.viewModel addObserver:self forKeyPath:@"movies" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [self.viewModel addObserver:self forKeyPath:@"sections" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
 -(void)removeObservers {
-    [self.viewModel removeObserver:self forKeyPath:@"movies"];
+    [self.viewModel removeObserver:self forKeyPath:@"sections"];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"movies"]) {
-        NSLog(@"Movies changed");
+    if ([keyPath isEqualToString:@"sections"]) {
         [self updateFeed];
     }
 }
@@ -104,12 +106,22 @@
 
 #pragma mark - UICollectionView delegate & datasource
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    MovieSectionView *sectionView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
+    if (!sectionView) {
+        sectionView = [[MovieSectionView alloc] init];
+    }
+    sectionView.viewModel = [[MovieSectionViewModel alloc] initWithTitle:[self.viewModel getFeedBySection:indexPath.section].section];
+    return sectionView;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return [self.viewModel numberOfElementsBySection:section];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return [self.viewModel numberOfSections];
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -118,8 +130,8 @@
         cell = [[MovieView alloc] init];
     }
     
-    cell.viewModel = [self.viewModel getMovieViewModelByIndex:indexPath.row];
-    cell.backgroundColor = [UIColor greenColor];
+    cell.viewModel = [self.viewModel getMoviesBySection:indexPath.section index:indexPath.row];
+    cell.backgroundColor = [UIColor blackColor];
     return  cell;
 }
 

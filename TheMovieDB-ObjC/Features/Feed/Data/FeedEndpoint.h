@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, FeedType) {
-    FeedTypeNowPlaying,
+    FeedTypeNowPlaying = 0,
     FeedTypeTrending,
     FeedTypePopular,
     FeedTypeTopRated,
