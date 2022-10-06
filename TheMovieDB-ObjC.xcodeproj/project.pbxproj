@@ -25,6 +25,7 @@
 		F9924CFD28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924CFC28E5F6870067C610 /* TheMovieDB_ObjCUITestsLaunchTests.m */; };
 		F9924D0D28E5FD120067C610 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9924D0C28E5FD120067C610 /* FeedViewController.m */; };
 		F9BE69C828EE1FDF005ED03E /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE69C728EE1FDF005ED03E /* MovieModel.swift */; };
+		F9BE69D128EE44E5005ED03E /* FeedSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BE69D028EE44E5005ED03E /* FeedSectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		F9924D0B28E5FD120067C610 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		F9924D0C28E5FD120067C610 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		F9BE69C728EE1FDF005ED03E /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		F9BE69D028EE44E5005ED03E /* FeedSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionViewModel.swift; sourceTree = "<group>"; };
+		F9BE69D328EF1830005ED03E /* TheMovieDB-Obj-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheMovieDB-Obj-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,7 @@
 				F9924CE228E5F6860067C610 /* LaunchScreen.storyboard */,
 				F9924CE528E5F6860067C610 /* Info.plist */,
 				F9924CE628E5F6860067C610 /* main.m */,
+				F9BE69D328EF1830005ED03E /* TheMovieDB-Obj-Bridging-Header.h */,
 			);
 			path = "TheMovieDB-ObjC";
 			sourceTree = "<group>";
@@ -223,6 +227,7 @@
 				F9813D2F28E78D1B00AF78DE /* MovieViewModel.m */,
 				F92BA33328E95E2D004C8ED5 /* FeedViewModel.h */,
 				F92BA33428E95E2D004C8ED5 /* FeedViewModel.m */,
+				F9BE69D028EE44E5005ED03E /* FeedSectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				F9924CD628E5F6850067C610 /* AppDelegate.m in Sources */,
 				F92BA33528E95E2D004C8ED5 /* FeedViewModel.m in Sources */,
 				F9924CE728E5F6860067C610 /* main.m in Sources */,
+				F9BE69D128EE44E5005ED03E /* FeedSectionViewModel.swift in Sources */,
 				F9924CD928E5F6850067C610 /* SceneDelegate.m in Sources */,
 				F990DDF328EA4F92008D1BD1 /* FeedEndpoint.m in Sources */,
 				F92BA33228E949DB004C8ED5 /* URLSessionHTTPClient.m in Sources */,
@@ -587,7 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dulce.TheMovieDB-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheMovieDB-ObjC/TheMovieDB-Obj-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -617,7 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dulce.TheMovieDB-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TheMovieDB-ObjC/TheMovieDB-Obj-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

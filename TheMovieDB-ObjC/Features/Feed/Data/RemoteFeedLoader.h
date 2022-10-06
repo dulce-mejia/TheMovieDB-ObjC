@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "URLSessionHTTPClient.h"
 #import "FeedEndpoint.h"
-#import "TheMovieDB_ObjC-Swift.h"
+@class MovieModel;
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FeedLoader <NSObject>

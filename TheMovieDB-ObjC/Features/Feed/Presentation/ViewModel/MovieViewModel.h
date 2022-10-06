@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TheMovieDB_ObjC-Swift.h"
 #import "RemoteImageLoader.h"
+@class MovieModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
