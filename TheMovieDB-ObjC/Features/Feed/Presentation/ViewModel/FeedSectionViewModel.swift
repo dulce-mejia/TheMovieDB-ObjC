@@ -8,12 +8,14 @@
 import Foundation
 
 @objcMembers public class FeedSectionViewModel: NSObject {
-    public let section: String
+    public let section: Int
+    public let name: String
     public let movies: [MovieViewModel]
     
     public init(section: Int, movies: [MovieViewModel]) {
+        self.section = section
         self.movies = movies
-        self.section = {
+        self.name = {
             switch section {
             case 0:
                 return "Now Playing"

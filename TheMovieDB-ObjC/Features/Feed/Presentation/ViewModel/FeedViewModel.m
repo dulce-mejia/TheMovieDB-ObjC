@@ -63,7 +63,10 @@
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         // NSLog(@"Finished");
-        weakSelf.sections = sectionsVM;
+        NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"section" ascending:YES];
+        NSArray * descriptors = [NSArray arrayWithObject:valueDescriptor];
+        
+        weakSelf.sections = [sectionsVM sortedArrayUsingDescriptors:descriptors];
 //        for(FeedSectionViewModel* section in weakSelf.sections) {
 //            NSLog(@"******* Section %@", section.section);
 //            for(MovieViewModel* movieVM in section.movies) {

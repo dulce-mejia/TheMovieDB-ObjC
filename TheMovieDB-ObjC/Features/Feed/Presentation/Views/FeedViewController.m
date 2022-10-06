@@ -112,7 +112,7 @@
     if (!sectionView) {
         sectionView = [[MovieSectionView alloc] init];
     }
-    sectionView.viewModel = [[MovieSectionViewModel alloc] initWithTitle:[self.viewModel getFeedBySection:indexPath.section].section];
+    sectionView.viewModel = [[MovieSectionViewModel alloc] initWithTitle:[self.viewModel getFeedBySection:indexPath.section].name];
     return sectionView;
 }
 
